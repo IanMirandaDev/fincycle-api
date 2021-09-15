@@ -5,5 +5,4 @@ if [ ! -f ".env" ]; then
 fi
 
 npm install;
-
 npm run start:dev;
