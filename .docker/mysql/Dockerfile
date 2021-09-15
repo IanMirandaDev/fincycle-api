@@ -1,3 +1,8 @@
 FROM mysql:latest
 
+ENV MYSQL_DATABASE=fin
+ENV MYSQL_USER=fin-db
+ENV MYSQL_PASSWORD=fin-db
+ENV MYSQL_ROOT_PASSWORD=root
+
 RUN usermod -u 1000 mysql

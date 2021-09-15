@@ -6,6 +6,7 @@
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
+    "start:docker": "docker-compose up",
     "prebuild": "rimraf dist",
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
@@ -22,7 +23,9 @@
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
+    "@nestjs/config": "^1.0.1",
     "@nestjs/core": "^8.0.0",
+    "@nestjs/mapped-types": "*",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/sequelize": "^8.0.0",
     "mysql2": "^2.3.0",

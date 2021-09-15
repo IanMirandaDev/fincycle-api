@@ -21,8 +21,3 @@ services:
     tty: true
     volumes: 
       - ./.docker/dbdata:/var/lib/mysql
-    environment: 
-      - MYSQL_DATABASE=fin
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_USERNAME=fin-api
-      - MYSQL_PASSWORD=fin-api-123
