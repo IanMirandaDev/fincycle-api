@@ -5,10 +5,15 @@ export enum TransactionCategory {
   CATEGORY2 = 'category2',
 }
 
+export const TransactionCategoryList: string[] =
+  Object.values(TransactionCategory);
+
 export enum TransactionType {
   CREDIT = 'credit',
   DEBIT = 'debit',
 }
+
+export const TransactionTypeList: string[] = Object.values(TransactionType);
 
 @Table({
   tableName: 'transactions',
@@ -24,9 +29,12 @@ export class Transaction extends Model {
   id: string;
 
   @Column({ allowNull: false })
-  paymentDate: Date;
+  payment_date: Date;
 
-  @Column({ allowNull: false, type: DataType.TEXT })
+  @Column({ allowNull: false })
+  name: string;
+
+  @Column({ allowNull: false })
   description: string;
 
   @Column({ allowNull: false })
